@@ -1,0 +1,147 @@
+:root {
+  --white: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(45deg, #c45e4e, #302029);
+  height: 110vh;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  background: var(--white);
+  text-align: center;
+  padding: 3em 3.5em;
+  height: 80%;
+  border-radius: 20px;
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+form div {
+  flex: 1 1 25%;
+  padding: 1em;
+  width: 200px;
+  max-width: 220px;
+}
+
+form div.button {
+  max-width: none;
+  flex: 0 0 100%;
+  padding: 0;
+}
+
+form h1 {
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-top: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  flex: 0 0 100%
+}
+
+form label {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form input, button {
+  background: transparent;
+  width: 125px;
+  padding: 1em;
+  margin-bottom: 2em;
+  border: none;
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
+  border-radius: 5000px;
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+  &[type="number"],
+  &[type="month"] {
+    text-align: center;
+    margin: 1em;
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+    &[type="submit"] {
+      width: 200px;
+      font-size: 1rem;
+      background: rgba(62, 42, 53, 0.5);
+      margin: 1em;
+  
+      &:hover {
+        cursor: pointer;
+        background: rgba(62, 42, 53, 0.3)
+      }
+  
+      &:active {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+}
+
+form div.result {
+  padding: 1em;
+  flex: auto;
+  max-width: none;
+}
+
+form p {
+  font-weight: 500;
+  margin-top: 0;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.8em;
+}
+
+#total-hours {
+  border: none;
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
+  border-radius: 2500px;
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  padding: 1.5em;
+  font-weight: 700;
+}
+
+::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+
+}
+
+a,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}

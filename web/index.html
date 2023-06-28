@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular Horas Mensais</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <form>
+        <h1>Calcular Horas Mensais</h1>
+
+        <div>
+          <label for="month">Mês</label>
+          <input type="month" name="month" id="month" />
+        </div>
+
+        <div>
+          <label for="daily-hours">Horas diárias</label>
+          <input
+            type="number"
+            name="daily-hours"
+            id="daily-hours"
+            max="8"
+            min="4"
+            placeholder="8" />
+        </div>
+
+        <div>
+          <label for="ignore-hours">Horas de abono</label>
+          <input
+            type="number"
+            name="ignore-hours"
+            id="ignore-hours"
+            min="0"
+            placeholder="0" />
+        </div>
+
+        <div class="button">
+          <button type="submit" class="form-button" id="form-button">
+            Calcular
+          </button>
+        </div>
+
+        <div class="result">
+          <p>Horas Totais</p>
+          <span id="total-hours">0</span>
+        </div>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
